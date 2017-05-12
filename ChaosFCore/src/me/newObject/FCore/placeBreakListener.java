@@ -7,12 +7,14 @@ import java.util.regex.Pattern;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
+import org.bukkit.block.Block;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
 import org.bukkit.event.block.BlockPlaceEvent;
+import org.bukkit.event.entity.EntityExplodeEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
@@ -96,9 +98,21 @@ public class placeBreakListener implements Listener {
 			}
 		}
 	}
-	
-	
-	
-	
+	@EventHandler
+	public void onEntityExplode(EntityExplodeEvent e){
+		for(Block b : e.blockList()){
+			if(b.getType() == Material.BEACON){
+				Location l = b.getLocation();
+				FLocation flocOfBlock = new FLocation(l);
+				Faction f = Board.getInstance().getFactionAt(flocOfBlock);
+				if(c.contains(f.getId())){
+					if(Utils.str2loc(c.getString(f.getId() + ".loc")).equals(l)){
+						c.set(f.getId(), null);
+						Core.getInstance().beacons.save();
+					}
+				}
+			}
+		}
+	}
 	
 }

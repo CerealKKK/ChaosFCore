@@ -1,0 +1,6 @@
+name: ChaosFBeacon
+main: me.newObject.FCore.Core
+version: 1.0
+commands:
+  fcore:
+    description: Gives you a Factioncore

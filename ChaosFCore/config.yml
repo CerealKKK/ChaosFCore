@@ -1,0 +1,54 @@
+# ChaosOP - Owner: DarkPvP
+
+beaconDisplayName: '&5FactionsCore'
+beaconLores:
+  - '&4Place this beacon in your faction land and protect it!'
+  - 'deded'
+beaconLevelLore: '&5Level: &9{level}' #{level} level of the beacon!
+recievedBeaconMsg: 'You have recieved a facbeacon'
+needFactionToPlace: 'You need to be in a faction to place a facbeacon down!'
+needToBeFLeaderToPlace: "You need to be the faction's leader!"
+needToBeFLeaderToUpgrade: 'You need to be faction leader to upgrade!'
+placedBeaconDown: '&aYou successfuly placed your facbeacon down!'
+cantPlaceInOwnFaction: '&4You cannot place the beacon in another factions land!'
+facAlreadyHasBeacon: '&5Your faction already have placed a beacon down!'
+needToBeLevel: '&4Your faction beacon needs to be level {level} to upgrade to this level!' #{level} for current level
+noFacGUIClick: '&4You are in no faction!'
+
+guiTitle: '&cFacBeacon Upgrades'
+facPowerboost:
+  Material: 'TNT'
+  Data: 0 
+  Amount: 1
+  Displayname: '&cPowerboost'
+  Lore:
+  - 'Buy this for 500000$ to have powerboost!'
+  Price: 500000
+  Command: 'f powerboost {facName} 100' #{facName} for the fac that gets the powerboost
+  removeCommand: 'f powerboost {facName} 0' #{facName} for the fac that gets the powerboost
+mcmmoBoost:
+  Material: 'EXP_BOTTLE'
+  Data: 0 
+  Amount: 1
+  Displayname: '&4mcmmoBoost'
+  Lore:
+  - 'Buy this for 10000000$ to get an mcmmoboost!'
+  Price: 10000000
+  Command: 'manuaddp {player} mcmmo.perks.xp.150percentboost.all' #{player} = player that gets given the mcmmoboost
+  removeCommand: 'manudelp {player} mcmmo.perks.xp.150percentboost.all' #{player} = player that gets taken away the mcmmoboost
+moneyBoost:
+  Material: 'DIAMOND'
+  Data: 0 
+  Amount: 1
+  Displayname: '&cMoneyBoost'
+  Lore:
+  - 'Buy this for 15000000$ to get a moneyboost for ur whole fac!'
+  Price: 15000000
+  Command: 'manuaddp {player} chaosSellwand.boost.5' #{player} = player that gets given the moneyboost, perm is in sellwand config
+  removeCommand: 'manudelp {player) chaosSellwand.boost.5'
+recievedMcmmoBoost: '&4You have recieved x1.5 mcmmo boost for joining this faction!'
+recievedMoneyBoost: '&4You have recieved x1.5 money booster (sellwand only) for joining this faction!'
+recievedPowerBoost: '&4Your faction has recieved a powerboost of 40!'
+
+
+#Made By newObject for ChaosOP GxNGxNGxNG
